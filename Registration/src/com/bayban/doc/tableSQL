@@ -1,0 +1,13 @@
+
+/* database postgresql 9.5*/
+CREATE TABLE public.a_user (
+	mobilenumber numeric NOT NULL,
+	phonearea varchar(5) NOT NULL,
+	firstname varchar(50) NOT NULL,
+	lastname varchar(30) NOT NULL,
+	dob timestamp NULL,
+	gender varchar(10) NULL,
+	email varchar(50) NOT NULL,
+	CONSTRAINT a_user_pk PRIMARY KEY (mobilenumber)
+);
+CREATE INDEX a_user_email_idx ON a_user USING btree (email);
